@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<servers>
+	<server id="0">
+	    <commonname>Freenode IRC</commonname>
+		<hostname>irc.freenode.net</hostname>
+		<port>6667</port>
+		<password></password>
+		<name>bot</name>
+		<nick>bot</nick>
+		<channels>
+			<channel>#test</channel>
+			<channel>#bot</channel></channels>
+		<identify>true</identify>
+		<identifypassword></identifypassword></server>
+	<server id="1">
+		<commonname>Quakenet IRC</commonname>
+		<hostname>irc.quakenet.org</hostname>
+		<port>6667</port>
+		<password></password>
+		<name>bot</name>
+		<nick>bot</nick>
+		<channels>
+			<channel>#test</channel>
+			<channel>#bot</channel>
+			<channel>#testing</channel></channels>
+		<identify>false</identify>
+		<identifypassword></identifypassword></server>
+</servers>

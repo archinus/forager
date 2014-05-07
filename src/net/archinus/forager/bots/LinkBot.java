@@ -23,7 +23,9 @@ public class LinkBot extends PircBot {
 		String[] words = message.split("\\s+");
 
 		for (String word : words) {
-			if (word.toLowerCase().matches("^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]")) {
+			if (word.toLowerCase()
+					.matches(
+							"^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]")) {
 				return true;
 			}
 		}
@@ -42,9 +44,10 @@ public class LinkBot extends PircBot {
 					new FileWriter("links.txt", true)))) {
 
 				System.err.println("Wrote new link to file");
-				out.println(message);
+				String time = new java.util.Date().toString();
+				out.println("[" + time + "] " + hostname + " " + channel + " "
+						+ sender + " " + message);
 			} catch (IOException e) {
-				// exception handling left as an exercise for the reader
 			}
 		}
 
